@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Cars
+            <a href="/cars/add" class="btn btn-success pull-right">Add New Car</a>
+        </h2>
+        <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Car&nbsp;Make</th>
+                        <th>Car&nbsp;Model</th>
+                        <th>Car&nbsp;Year</th>
+                        <th>Car&nbsp;VIN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each cars}}
+                    <tr>
+                        <td><a href="/stores?retailer={{make}}">{{make}}</a></td>
+                        <td>{{model}}</td>
+                        <td><a href="/cars?year={{year}}">{{year}}</a></td>
+                        <td><a href="/car/{{vin}}">{{vin}}</a></td>
+                        <td><a href="/cars/delete/{{vin}}" class="btn btn-danger">remove</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    {{#unless cars}}
+    <div class="col-md-12 text-center">
+        <strong>{{message}}</strong>
+    </div>
+    {{/unless}}
+</div>

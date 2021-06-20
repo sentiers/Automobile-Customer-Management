@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>People
+            <a href="/people/add" class="btn btn-success pull-right">Add New Person</a>
+        </h2>
+        <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Person&nbsp;ID</th>
+                        <th>Full&nbsp;Name</th>
+                        <th>Phone&nbsp;Number</th>
+                        <th>Address</th>
+                        <th>Car&nbsp;Vin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each people}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td><a href="/person/{{id}}">{{first_name}} {{last_name}}</a></td>
+                        <td><a href="tel:{{phone}}">{{phone}}</a></td>
+                        <td>{{address}} {{city}}</td>
+                        <td><a href="/cars?vin={{vin}}">{{vin}}</a></td>
+                        <td><a href="/people/delete/{{id}}" class="btn btn-danger">remove</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    {{#unless people}}
+    <div class="col-md-12 text-center">
+        <strong>{{message}}</strong>
+    </div>
+    {{/unless}}
+</div>

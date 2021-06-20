@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{car.make}} {{car.model}} - Vin: {{car.vin}} </h2>
+        <br />
+        <form method="post" action="/car/update">
+            <input type="hidden" name="vin" value="{{car.vin}}" />
+            <fieldset>
+                <legend>Car Information</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="make">Car Make:</label>
+                            <input class="form-control" id="make" name="make" type="text" value="{{car.make}}" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="model">Car Model:</label>
+                            <input class="form-control" id="model" name="model" type="text" value="{{car.model}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="year">Car year:</label>
+                            <input class="form-control" id="year" name="year" type="text" value="{{car.year}}" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <hr />
+
+            <input type="submit" class="btn btn-primary pull-right" value="Update Car" /><br /><br /><br />
+        </form>
+    </div>
+</div>

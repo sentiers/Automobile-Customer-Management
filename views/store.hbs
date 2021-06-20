@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{store.retailer}} - Id: {{store.id}}</h2>
+        <br />
+        <form method="post" action="/store/update">
+            <input type="hidden" name="id" value="{{store.id}}" />
+            <fieldset>
+                <legend>Store Information</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="retailer">Store Name:</label>
+                            <input class="form-control" id="retailer" name="retailer" type="text"
+                                value="{{store.retailer}}" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phone">Store Phone:</label>
+                            <input class="form-control" id="phone" name="phone" type="text" value="{{store.phone}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="address">Store Address:</label>
+                            <input class="form-control" id="address" name="address" type="text"
+                                value="{{store.address}}" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="city">Store City:</label>
+                            <input class="form-control" id="city" name="city" type="text" value="{{store.city}}" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <hr />
+
+            <input type="submit" class="btn btn-primary pull-right" value="Update Store" /><br /><br /><br />
+        </form>
+    </div>
+</div>

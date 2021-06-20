@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Add Car</h2>
+        <br />
+        <form method="post" action="/car/add">
+
+            <fieldset>
+                <legend>Car Information</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="make">Car Make:</label>
+                            <input class="form-control" id="make" name="make" type="text" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="model">Car Model:</label>
+                            <input class="form-control" id="model" name="model" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="year">Car year:</label>
+                            <input class="form-control" id="year" name="year" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vin Information</legend>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="vin">Vin :</label>
+                            <input class="form-control" id="vin" name="vin" type="text" />
+                        </div>
+                    </div>
+            </fieldset>
+
+            <hr />
+
+            <input type="submit" class="btn btn-primary pull-right" value="Add Car" /><br /><br /><br />
+        </form>
+    </div>
+</div>

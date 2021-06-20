@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Pictures
+            <a href="/pictures/add" class="btn btn-success pull-right">Add New Picture</a>
+        </h2>
+        <hr />
+    </div>
+    <div class="col-md-12">
+        {{#each pictures}}
+        <div class="col-md-6">
+            <img src="/pictures/uploaded/{{this}}" class="img-responsive img-thumbnail" />
+        </div>
+        {{else}}
+        <div class="col-md-12 text-center">
+            <strong>No Pictures Available</strong>
+        </div>
+        {{/each}}
+    </div>
+</div>
